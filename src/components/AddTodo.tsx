@@ -4,10 +4,14 @@ import { useTodo } from "../context";
 import { Input } from "./Input";
 
 export const AddTodo = () => {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState<string>("");
+  const handelSubmission = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("form has been submitted");
+  };
   return (
     <div>
-      <form>
+      <form onSubmit={handelSubmission}>
         <div className="flex items-center w-full max-w-lg gap-2 p-5 m-auto">
           <input
             value={input}
