@@ -21,13 +21,13 @@ export const AddTodo = () => {
     <div>
       <form onSubmit={handelSubmission}>
         <div className="flex items-center w-full max-w-lg gap-2 p-5 m-auto">
-          <input
+          <Input
             ref={inputRef}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             type="text"
             className="w-full px-5 py-2 bg-transparent border-2 outline-none border-zinc-600 rounded-xl placeholder:text-zinc-500 focus:border-white"
-            placeholder="add task"
+            placeholder="start typing ..."
           />
           <button
             type="submit"
