@@ -17,8 +17,8 @@ export const TodoItem = (props: { todo: Todo }) => {
     <motion.li
       layout
       className={cn(
-        "p-5 rounded-xl bg-zinc-900",
-        todo.status === "completed" && "bg-opacity-50 text-zinc-500"
+        "p-5 rounded-xl bg-zinc-900 text-white",
+        todo.status === "completed" && "bg-opacity-5 text-lime-500"
       )}
     >
       <motion.span
