@@ -5,6 +5,14 @@ import { Input } from "./Input";
 
 export const AddTodo = () => {
   const [input, setInput] = useState<string>("");
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
+
   const handelSubmission = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("form has been submitted");
@@ -14,6 +22,7 @@ export const AddTodo = () => {
       <form onSubmit={handelSubmission}>
         <div className="flex items-center w-full max-w-lg gap-2 p-5 m-auto">
           <input
+            ref={inputRef}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             type="text"
