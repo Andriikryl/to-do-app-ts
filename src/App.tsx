@@ -3,7 +3,7 @@ import { AddTodo, TodoList } from "./components";
 
 export function App() {
   return (
-    <div>
+    <div className=" bg-[#8ecae6] w-[100%] h-[100dvh]">
       <Toaster position="bottom-center" />
       <AddTodo />
       <TodoList />
